@@ -1,0 +1,25 @@
+<div class="Top">
+    <div class="superior">
+        <div class="superior_titulo">
+            Saldo Disponivel:
+        </div>
+
+        <div class="superior_valor">{{orcamentoTotal | currency:'MNX':'€':'1.2-2' }}</div>
+
+        <div class="superior_depositar limparEstilos">
+            <div class=".superior_depositar--texto">Depositos</div>
+            <div class="right">
+                <div class="superior_levantar--valor">{{depositoTotal  | currency:'MNX':'€':'1.2-2'}}</div>
+                <div class="superior_depositar--porcentagem">&nbsp;</div>
+            </div>
+        </div>
+
+        <div class="superior_levantar limparEstilos">
+            <div class="superior_levantar--text">Levantamentos</div>
+            <div class="right limpiarEstilos">
+                <div class="superior_levantar--valor">- {{levantamentoTotal  | currency:'MNX':'€':'1.2-2'}}</div>
+                <div class="superior_levantar--porcentagem">{{porcentagemTotal | percent }}</div>
+            </div>
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<div class="depositar">
+          <h2 class="depositar_titulo">Depositos</h2>
+
+
+              <div *ngFor="let deposito of depositos" class="elemento limpiarEstilos">
+                  <div class="elemento_descricao">{{deposito.descricao}}</div>
+                  <div class="right limpiarEstilos">
+                      <div class="elemento_valor">{{deposito.valor | currency:'MNX':'€':'1.2-2' }}</div>
+                      <div class="elemento_eliminar">
+                          <button class="elemento_eliminar--btn">
+                              <i class="ion-ios-close-outline" (click)="eliminarRegistro(deposito)"></i>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+
+      </div>

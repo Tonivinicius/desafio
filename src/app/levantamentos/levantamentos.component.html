@@ -1,0 +1,16 @@
+<div class="levantar">
+          <h2 class="levantar_titulo">Levantamentos</h2>
+
+
+              <div  *ngFor="let levantamento of levantamentos" class="elemento limpiarEstilos" >
+                  <div class="elemento_descricao">{{ levantamento.valor | currency:'MNX':'€':'1.2-2' }}</div>
+                  <div class="right limpiarEstilos">
+                      <div class="elemento_valor">- {{ levantamento.descricao }}</div>
+                      <div class="elemento_porcentagem">{{ calcularPorcentagem(levantamento) | percent }}</div>
+                      <div class="elemento_eliminar">
+                          <button class="elemento_eliminar--btn"><i class="ion-ios-close-outline" (click)="eliminarLevantamentos(levantamento)"></i></button>
+                      </div>
+                  </div>
+              </div>
+
+      </div>

@@ -1,0 +1,26 @@
+<form>
+  <div class="juntar">
+      <div class="juntar_content">
+          <select (change)="tipoOperacao($event)" [ngClass]="{redfocus: tipo === 'levantamentoOperacao'}" class="juntar_btn">
+              <option value="depositoOperacao" selected>Depositar</option>
+              <option value="levantamentoOperacao">Levantar</option>
+          </select>
+          <input [ngClass]="{redfocus: tipo === 'levantamentoOperacao'}"
+            type="text"
+            class="juntar_descricao"
+            placeholder="Descrição"
+            name="descricaoInput"
+            [(ngModel)]="descricaoInput">
+
+            <input [ngClass]="{redfocus: tipo === 'levantamentoOperacao'}"
+              type="number"
+              class="juntar_valor"
+              placeholder="Valor"
+              name="valorInput"
+              [(ngModel)]="valorInput">
+          <button type="submit" class="juntar_btn"(click)="addValor()" >
+            <i [ngClass]="{red: tipo === 'levantamentoOperacao'}" class="ion-ios-checkmark-outline"></i>
+          </button>
+      </div>
+  </div>
+</form>
